@@ -48,6 +48,3 @@ contactBtn.addEventListener('click', function (event) {
 });
 
 
-prd1.addEventListener('click' , function(){
-    
-})

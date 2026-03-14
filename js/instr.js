@@ -1,74 +1,50 @@
-// NAV BUTTONS
-let homeBtn = document.getElementById("homeBtn")
-let shopBtn = document.getElementById("shopBtn")
-let aboutBtn = document.getElementById("aboutBtn")
-let contBtn = document.getElementById("contactBtn")
 
-// OTHER ELEMENTS
+
+let homeBtn = document.getElementById("headBtn home")
+let shopBtn = document.getElementById("headBtn Shop")
+let aboutBtn = document.getElementById("headBtn about")
+let contBtn = document.getElementById("headBtn cont") 
 let prdBox = document.getElementById("row")
 let acc = document.getElementById("acc")
-let purch = document.getElementById("purchases")
 let signup = document.getElementById("signup")
-
-// CONTACT BUTTON
-let contactBtn = document.querySelector("#contact button")
-
-
-// NAVIGATION
-if(purch){
-purch.addEventListener("click",function(){
-window.location.href="wishlist.html"
+let purch = document.getElementById("purchases")
+let contact = document.querySelector("#contact button")
+let prd1 = document.getElementById("prd1")
+let headBtn = document.getElementById("headBtn");
+ 
+ 
+purch.addEventListener('click' , function(){
+    window.location.replace('wishlist.html');
 })
-}
-
-if(aboutBtn){
-aboutBtn.addEventListener("click",function(){
-window.location.href="about.html"
+aboutBtn.addEventListener('click' , function(){
+    window.location.replace('about.html');
 })
-}
-
-if(homeBtn){
-homeBtn.addEventListener("click",function(){
-window.location.href="index.html"
+homeBtn.addEventListener('click' , function(){
+    window.location.replace('index.html');
 })
-}
-
-if(shopBtn){
-shopBtn.addEventListener("click",function(){
-window.location.href="shop.html"
+shopBtn.addEventListener('click' , function(){
+    window.location.replace('shop.html');
 })
-}
-
-if(contBtn){
-contBtn.addEventListener("click",function(){
-window.location.href="contact.html"
+contBtn.addEventListener('click' , function(){
+    window.location.replace('contact.html');
 })
-}
-
-if(acc){
-acc.addEventListener("click",function(){
-window.location.href="login.html"
+acc.addEventListener('click' , function(){
+    window.location.replace('login.html');
 })
-}
-
-if(signup){
-signup.addEventListener("click",function(){
-window.location.href="account.html"
-})
-}
-
-
-// CONTACT CONFIRMATION
-if(contactBtn){
-
-contactBtn.addEventListener("click",function(event){
-
-const confirmation = confirm("Do you really want to call +2145486?")
-
-if(!confirmation){
-event.preventDefault()
-}
-
+signup.addEventListener('click' , function(){
+    window.location.replace('account.html');
 })
 
-}
+
+
+
+let contactBtn = document.querySelector("#contact button"); // Selects the button inside #contact
+
+contactBtn.addEventListener('click', function (event) {
+    const confirmation = confirm("Do you really want to call +2145486?");
+    if (!confirmation) {
+        event.preventDefault(); // Prevent the default action
+    }
+});
+
+
